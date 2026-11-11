@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | Wellmma Playground</title>
+<link rel="icon" href="logo.png">
 <meta name="description" content="How Wellmma Playground handles family data. Wellmma runs no server of its own — every family's data lives inside the parent's own Firebase project.">
 
 <style>
@@ -88,12 +89,28 @@ h1{font-size:30px;}
 h2{font-size:22px;}
 }
 </style>
+<style>
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+.nav a{padding:8px 16px;border-radius:999px;border:1px solid var(--line);color:var(--muted);text-decoration:none;font-size:15px;}
+.nav a.on{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);font-weight:600;}
+.hero{display:flex;gap:24px;align-items:center;margin-bottom:10px;}
+.hero img{width:96px;height:96px;border-radius:22px;flex:none;}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;margin:6px 8px 6px 0;}
+.btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--brand);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0;}
+.grid div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:16px 18px;}
+.grid b{display:block;color:var(--ink);margin-bottom:4px;}
+.grid span{color:var(--muted);font-size:15px;line-height:1.6;}
+.footer a{color:var(--muted);margin:0 8px;}
+@media (max-width:640px){.hero{flex-direction:column;align-items:flex-start;gap:14px}.hero img{width:76px;height:76px}}
+</style>
 
 </head>
 
 <body>
 
 <div class="container">
+<nav class="nav"><a href="home.html">Home</a><a href="./" class="on">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
 
 <h1>Privacy Policy</h1>
 <p class="tag">Build the life you want.</p>
@@ -101,8 +118,8 @@ h2{font-size:22px;}
 <p><strong>Application:</strong> Wellmma Playground</p>
 <p><strong>Package name:</strong> com.wellmma.playground</p>
 <p><strong>Developer:</strong> Wellmma</p>
-<p><strong>Contact:</strong> developer.saadh@gmail.com</p>
-<p><strong>Last Updated:</strong> September 2026</p>
+<p><strong>Contact:</strong> wellmma.care@gmail.com</p>
+<p><strong>Last Updated:</strong> November 2026</p>
 
 <div class="notice">
 Wellmma Playground is a parent-controlled learning space for children. It is built so that a family's information stays with the family: the app has <strong>no server of its own</strong>. Each parent connects their own free Firebase project during setup, and everything the family creates is stored inside that parent's own Google account.
@@ -110,17 +127,40 @@ Wellmma Playground is a parent-controlled learning space for children. It is bui
 
 <h2>1. Introduction</h2>
 
-<p>Wellmma Playground gives a parent a private, purpose-built digital space for their child. A parent approves videos, courses, books, projects, goals, habits, daily plans and screen-time settings; the child sees only what the parent has approved. There is no feed of recommended content, no followers, no likes, no comments and no messaging.</p>
+<p>Wellmma Playground gives a parent a private, purpose-built digital space for their child. A parent approves videos, courses, books, projects, goals, habits, daily plans and screen-time settings; the child sees only what the parent has approved. There is no feed of recommended content, no followers, no likes, no comments and no public messaging.</p>
 
 <p>This policy explains what information the app processes, where it is stored, and what choices you have.</p>
 
 <h2>2. Where Your Data Lives</h2>
 
-<p>During one-time setup the parent creates a free Firebase project and pastes its public configuration into the app. From that moment on, all family information is written to and read from <strong>that parent's own Firebase Realtime Database</strong>. The app installs security rules so only the signed-in family can read the space.</p>
+<p>During one-time setup the parent creates a free Firebase project in their own Google account — either automatically, by giving Wellmma Playground permission to create it for them, or manually in the Firebase console. From that moment on, all family information is written to and read from <strong>that parent's own Firebase Realtime Database</strong>. The app installs security rules so only the signed-in family can read the space.</p>
 
 <p>We do not operate a central database of families, we do not receive copies of your family's content, and we do not sell personal information to advertisers or any third party.</p>
 
-<h2>3. Information Processed</h2>
+<h2>3. Google Account Data</h2>
+
+<p>When a parent taps <strong>Connect</strong> or <strong>Continue with Google</strong>, the app asks Google for the following permissions. They are used only for the purposes listed here.</p>
+
+<table>
+<tr><th>Permission</th><th>Why we ask for it</th></tr>
+<tr><td>Your email address and basic profile (name, picture)</td><td>To sign the parent in and show which Google account is connected.</td></tr>
+<tr><td>See your Firebase projects (firebase.readonly)</td><td>To list the parent's existing Firebase projects so they can pick the one for their family.</td></tr>
+<tr><td>Manage Firebase and Google Cloud projects (firebase, cloud-platform)</td><td>Only when the parent chooses <strong>Setup Automatically</strong>: to create a free family Firebase project in the parent's own account, turn on sign-in and the database, and install the family security rules.</td></tr>
+</table>
+
+<ul>
+<li>These permissions are used only on the parent's device, at the moment the parent starts setup or signs in.</li>
+<li>Google access tokens are kept in the device's memory only for that step. They are not saved, not sent to any Wellmma server (we do not have one) and not shared with anyone.</li>
+<li>We never read, change or delete any other project, file, email or data in the parent's Google account.</li>
+<li>Google user data is not used for advertising, is not sold, and is not used to train AI or machine-learning models.</li>
+<li>A parent can remove this access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+</ul>
+
+<div class="notice">
+Wellmma Playground's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.
+</div>
+
+<h2>4. Information Processed</h2>
 
 <ul>
 <li>Parent account email address, used only to sign in (handled by Firebase Authentication in the parent's own project).</li>
@@ -131,11 +171,13 @@ Wellmma Playground is a parent-controlled learning space for children. It is bui
 <li>Creative posts the child makes in the Create studio (image links, video links and written text).</li>
 <li>Family settings: permissions, parent PIN, screen-time limits and theme preference.</li>
 <li>Purchase status for Premium features, as reported by Google Play.</li>
+<li>Optional family Team Chat messages, visible only to members of the same family and controlled by the parent.</li>
+<li>Optional AI Chat conversations, if the parent turns on AI Chat with their own OpenAI key.</li>
 </ul>
 
 <p>We do <strong>not</strong> collect location, contacts, camera or microphone data, advertising identifiers, or browsing history from outside the app.</p>
 
-<h2>4. Device Permissions</h2>
+<h2>5. Device Permissions</h2>
 
 <table>
 <tr><th>Permission</th><th>Purpose</th></tr>
@@ -143,42 +185,43 @@ Wellmma Playground is a parent-controlled learning space for children. It is bui
 <tr><td>com.android.vending.BILLING</td><td>Used only when a parent chooses to buy or restore a Premium plan through Google Play.</td></tr>
 </table>
 
-<h2>5. Children's Privacy</h2>
+<h2>6. Children's Privacy</h2>
 
 <p>Wellmma Playground is designed to be used by a child under the direction of a parent or guardian. A child never creates an account: a child device is paired by the parent and signs in without personal details. All content a child can see is approved in advance by the parent.</p>
 
 <p>We do not knowingly collect personal information from a child beyond the nickname, age group, avatar and interests that the parent enters. If you believe information has been entered in error, a parent can edit or delete it at any time from Parent Zone.</p>
 
-<h2>6. Content Added by Parents</h2>
+<h2>7. Content Added by Parents</h2>
 
 <p>Parents may add links to videos and other resources hosted by third parties such as YouTube, Vimeo, Instagram and Google Drive. When such a link is played, that third party may process information according to its own privacy policy. Wellmma Playground uses their official players and does not add tracking of its own.</p>
 
-<h2>7. Google Play Billing</h2>
+<h2>8. Google Play Billing</h2>
 
 <p>Premium features are sold through Google Play Billing. Purchases, renewals, refunds and cancellations are handled entirely by Google Play. Wellmma Playground never receives or stores payment card details; it only reads whether a valid purchase exists.</p>
 
-<h2>8. Data Storage and Retention</h2>
+<h2>9. Data Storage and Retention</h2>
 
 <p>Information is retained inside the parent's own Firebase project for as long as the parent keeps it there. Because the parent owns the project, the parent can edit or delete any record at any time, and can delete the entire project from the Firebase console. Some settings, such as the chosen theme, are stored only on the device and are removed when the app is uninstalled.</p>
 
-<h2>9. Third-Party Services</h2>
+<h2>10. Third-Party Services</h2>
 
 <ul>
 <li>Google Firebase (Authentication and Realtime Database) — inside the parent's own Google account.</li>
 <li>Google Play Store, Google Play services and Google Play Billing.</li>
 <li>Video platforms used only when a parent adds a link: YouTube, Vimeo, Instagram, Google Drive.</li>
+<li>OpenAI — only if the parent turns on AI Chat with their own OpenAI key. Messages typed in AI Chat are sent directly from the device to OpenAI under the parent's own OpenAI account.</li>
 <li>Android system services required for the app to run.</li>
 </ul>
 
-<h2>10. Data Security</h2>
+<h2>11. Data Security</h2>
 
 <p>The app installs Firebase security rules that restrict reading and writing to the signed-in family, and parent-only areas are additionally protected by a family PIN. We apply reasonable technical safeguards, but no electronic storage or transmission method can be guaranteed absolutely secure.</p>
 
-<h2>11. No Advertising, No Social Features</h2>
+<h2>12. No Advertising, No Social Features</h2>
 
-<p>There is no advertising, no advertising SDK, no recommendation engine, no infinite feed and no social network in the app. There are no followers, likes, comments, direct messages or public profiles.</p>
+<p>There is no advertising, no advertising SDK, no recommendation engine, no infinite feed and no social network in the app. There are no followers, likes, comments or public profiles. The optional Team Chat works only inside one family and is controlled by the parent.</p>
 
-<h2>12. Your Rights</h2>
+<h2>13. Your Rights</h2>
 
 <ul>
 <li>View, edit or delete any family record from inside the app.</li>
@@ -189,20 +232,21 @@ Wellmma Playground is a parent-controlled learning space for children. It is bui
 
 <p>Instructions for account and data deletion are provided on our account deletion page.</p>
 
-<h2>13. Changes to this Privacy Policy</h2>
+<h2>14. Changes to this Privacy Policy</h2>
 
 <p>We may update this Privacy Policy to reflect new features, improvements or legal requirements. When significant changes are made, the "Last Updated" date above is revised.</p>
 
-<h2>14. Contact Us</h2>
+<h2>15. Contact Us</h2>
 
 <p>
 <strong>Developer:</strong> Wellmma<br>
 <strong>Application:</strong> Wellmma Playground<br>
-<strong>Email:</strong> <a href="mailto:developer.saadh@gmail.com">developer.saadh@gmail.com</a>
+<strong>Email:</strong> <a href="mailto:wellmma.care@gmail.com">wellmma.care@gmail.com</a>
 </p>
 
 <div class="footer">
-© 2026 Wellmma Playground. All Rights Reserved.
+<p><a href="home.html">Home</a> · <a href="./">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+<p>© 2026 Wellmma Playground · <a href="mailto:wellmma.care@gmail.com">wellmma.care@gmail.com</a></p>
 </div>
 
 </div>
